@@ -3,7 +3,7 @@ margin = size
 position = 0
 a = [0] * size
 while True:
-	opt,values = input().split()
+	opt = input()
 	if opt == 'I':
 		value = int(values)
 		a[position] = value
