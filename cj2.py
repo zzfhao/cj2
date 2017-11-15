@@ -6,12 +6,18 @@ opt = ''
 value = 0		
 while True:
 	try:
+		# this part enable the variable number of input in the same line
+		# the split function split the input by space into several strings and store them in the same list
 		input_opts = input().split()
+		# get the number of strings from the input
 		num_elmts = len(input_opts)
-
+		# if there are two input, which is the case for insert operation, take the first as operator and second one as value
 		if(num_elmts == 2):
+			# get the first string from the list
 			opt = input_opts[0] 
+			# get the second string from the list
 			value = input_opts[1]
+		# when there is not two input, which means <delete>, <print> and <show> operations
 		else:
 			opt = input_opts[0]
 			 
@@ -31,8 +37,7 @@ while True:
 		elif opt == 'S':
 			print (position,size)
 		elif opt == 'P':
-			#for i in range(position):
-				#print (a[i])
+			# print all elements in the same line!!
 			print(*a[:position])
 		elif opt == 'D':
 			if position != 0:
